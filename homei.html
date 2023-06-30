@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Du</title>
+        <style>
+            body {
+                background-color: #f0f0f0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                padding: 0;
+                background-image: url('Meyetransp.jpg');  
+                background-size: cover;  
+                position: relative;
+                font-family: Arial, sans-serif; 
+                color: white; 
+            }
+            body::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: #ffffff;
+                background-image: url('fern.jpg'); 
+                background-repeat: repeat; 
+                z-index: 1;  
+            }
+            h1, p, .links, video {
+                position: relative;
+                z-index: 2;  
+            }
+           
+            .links {
+                display: flex;
+                justify-content: center;
+                gap: 75px;
+                margin-top: 10px;
+                text-shadow: -1px -1px 0 #000, /* top left */
+                  1px -1px 0 #000, /* top right */
+                  -1px 1px 0 #000, /* bottom left */
+                  1px 1px 0 #000; /* bottom right */
+            }
+            a {
+                color: #ffffff;
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            .content {
+                display: flex;
+                justify-content: space-around;
+                width: 90%;
+            }
+            .content > * {
+                margin: 10px;
+            
+                  
+            }
+            
+            .logo {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: 5px auto;
+            }
+            
+            
+            .links img {
+                width: 200px; /* You can set the width */
+                height: auto; /* Height auto to maintain aspect ratio */
+                transition: transform 0.5s ease-in-out; /* This is for smooth transition */
+            }
+            .title-image {
+                position: relative;
+                z-index: 2;
+            }
+            
+            .links a:hover img {
+                transform: rotate(30deg); /* Rotate image 360 degrees on hover */
+            }
+        </style>
+        
+    </head>
+    <body>
+        <a href="#"><img src="dflogoii.png" alt="Psyche Du Film Logo" class="logo title-image"></a>
+        
+        <div class="links">
+            <a href="https://www.inprnt.com/profile/psydufilm/" target="_blank"><img src="shopii.png" alt="Buy Art!"></a>
+            <a href="https://www.instagram.com/psychedufilm/" target="_blank"><img src="galli.png" alt="Instagram"></a>
+            <a href="https://www.tiktok.com/@du_film" target="_blank"><img src="aboutii.png" alt="TikTok"></a>
+            <a href="https://www.youtube.com/@psychedufilm" target="_blank"><img src="musici.png" alt="YouTube"></a>
+            <a href="https://www.youtube.com/@psychedufilm" target="_blank"><img src="journalii.png" alt="YouTube"></a>
+            <div class="slider-container">
+          </div>
+    </body>
+</html>

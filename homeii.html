@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Du</title>
+        <style>
+            body {
+                background-color: #f0f0f0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                padding: 0;
+                background-image: url('Meyetransp.jpg');  
+                background-size: cover;  
+                position: relative;
+                font-family: Arial, sans-serif; 
+                color: white; 
+            }
+            body::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: #ffffff;
+                background-image: url('fern.jpg'); 
+                background-repeat: repeat; 
+                z-index: 1;  
+            }
+            h1, p, .links, .contact-form {
+                position: relative;
+                z-index: 2;  
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+                box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.3); 
+            }
+            .links {
+                display: flex;
+                justify-content: center;
+                gap: 75px;
+                margin-top: 10px;
+                text-shadow: -1px -1px 0 #000, /* top left */
+                  1px -1px 0 #000, /* top right */
+                  -1px 1px 0 #000, /* bottom left */
+                  1px 1px 0 #000; /* bottom right */
+            }
+            a {
+                color: #ffffff;
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            .contact-form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 50%;
+                margin-top: 20px;
+            }
+            .contact-form input, .contact-form textarea {
+                width: 100%;
+                margin-bottom: 10px;
+                padding: 5px;
+            }
+            .contact-form button {
+                padding: 10px;
+                cursor: pointer;
+            }
+            .logo {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: 5px auto;
+            }
+            .links img {
+                width: 200px; 
+                height: auto;
+                transition: transform 0.5s ease-in-out; 
+            }
+            .slider {
+                position: relative;
+                width: 30%; /* Reduced slider size */
+                overflow: hidden;
+                z-index: 2;
+            }
+            .slides {
+                display: flex;
+                transition: all 1s ease;
+            }
+            .slides img {
+                width: 100%;
+                flex-shrink: 0;
+            }
+            .slide-buttons {
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 3;
+            }
+            .slide-button {
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+                margin: 0 2px;
+                background-color: #ffffff;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+            .slide-button.active {
+                background-color: #000000;
+            }
+            .links a:hover img {
+                transform: rotate(30deg); /* Rotate image 360 degrees on hover */
+            }
+        </style>
+    </head>
+    <body>
+        <a href="#"><img src="dflogoii.png" alt="Psyche Du Film Logo" class="logo title-image"></a>
+        <div class="links">
+            <a href="https://www.inprnt.com/profile/psydufilm/" target="_blank"><img src="shopii.png" alt="Buy Art!"></a>
+            <a href="https://www.instagram.com/psychedufilm/" target="_blank"><img src="galli.png" alt="Instagram"></a>
+            <a href="https://www.tiktok.com/@du_film" target="_blank"><img src="aboutii.png" alt="TikTok"></a>
+            <a href="https://www.youtube.com/@psychedufilm" target="_blank"><img src="musici.png" alt="YouTube"></a>
+            <a href="https://www.youtube.com/@psychedufilm" target="_blank"><img src="journalii.png" alt="YouTube"></a>
+        </div>
+        <div class="contact-form">
+            <h2>Contact Me</h2>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </div>
+        <div class="slider" id="slider">
+            <div class="slides">
+                <img src="dnz.jpg" alt="Slide 1">
+                <img src="MMM.jpg" alt="Slide 2">
+                <img src="Cstar.jpg" alt="Slide 3">
+                <!-- Add more images as needed -->
+            </div>
+            <div class="slide-buttons" id="slide-buttons"></div>
+        </div>
+        <script>
+            const slider = document.getElementById('slider');
+            const slides = slider.querySelector('.slides');
+            const slideButtons = slider.querySelector('#slide-buttons');
+
+            let currentSlide = 0;
+
+            slides.querySelectorAll('img').forEach((_, idx) => {
+                const button = document.createElement('div');
+                button.classList.add('slide-button');
+                button.addEventListener('click', () => changeSlide(idx));
+                slideButtons.appendChild(button);
+            });
+
+            function changeSlide(slideIndex) {
+                const slideWidth = slides.querySelector('img').clientWidth;
+                slides.style.transform = `translateX(${-slideWidth * slideIndex}px)`;
+                currentSlide = slideIndex;
+                updateSlideButtons();
+            }
+
+            function updateSlideButtons() {
+                slideButtons.querySelectorAll('.slide-button').forEach((button, idx) => {
+                    if (idx === currentSlide) {
+                        button.classList.add('active');
+                    } else {
+                        button.classList.remove('active');
+                    }
+                });
+            }
+            changeSlide(0);
+        </script>
+    </body>
+</html>
