@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Your Title Here</title>
+    <title>Psyche Du Film</title>
     <style>
+        body {
+            background-image: url('flower.jpg');
+            background-repeat: repeat;
+            background-attachment: fixed;
+        }
         .container {
             width: 80%;
             margin: 0 auto;
@@ -11,58 +16,55 @@
         .section {
             margin-bottom: 2em;
         }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
         .button {
             display: inline-block;
-            margin: 1em;
-            padding: 1em;
-            text-decoration: none;
-            background-color: #f0f0f0;
-            color: #000;
-            border-radius: 5px;
         }
         .button img {
             width: 50px;
             height: 50px;
         }
-        .button-left {
-            float: left;
-        }
-        .button-right {
-            float: right;
-        }
     </style>
 </head>
 <body>
-    <a href="https://your-url.com" target="_blank" class="button button-left">
-        <img src="left-button-image.jpg" alt="Left Button Image">
-        <p>Text for left button</p>
-    </a>
-
-    <a href="https://your-other-url.com" target="_blank" class="button button-right">
-        <img src="right-button-image.jpg" alt="Right Button Image">
-        <p>Text for right button</p>
-    </a>
-
     <div class="container">
-        <!-- Visuals Section -->
-        <div class="section" id="visuals">
-            <h2>Visuals</h2>
-            <p>Text that describes idea of videos / references psychedelia stuff</p>
-            <img src="image-placeholder.jpg" alt="Image Description Here">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/VideoID" frameborder="0" allowfullscreen></iframe>
+        <div class="header">
+            <a href="https://your-url.com" target="_blank" class="button button-left">
+                <img src="eye.png" alt="Left Button Image">
+            </a>
+            
+            <h2><img src="dflogoii.png" alt="Visuals" width="475" height="150"></h2>
+
+            <a href="https://your-other-url.com" target="_blank" class="button button-right">
+                <img src="right-button-image.jpg" alt="Right Button Image">
+            </a>
         </div>
+            <!-- Visuals Section -->
+<!-- Visuals Section -->
+<div class="section" id="visuals">
+    <p style="color:whitesmoke;">I remix film kind of the same way Djs mix music. Been freakishly studying experimental art for a decade. Feast your eyes.</p>
+    <div style="display: flex; justify-content: space-between;">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Kf2Zd6xRqZI?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/5-8uPRM7-AY?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+</div>
+
 
         <!-- Music Section -->
         <div class="section" id="music">
-            <h2>Music</h2>
-            <p>Text that describes inspo / vision for the music</p>
-            <iframe src="https://open.spotify.com/embed/track/SpotifyTrackID" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/VideoID" frameborder="0" allowfullscreen></iframe>
+            <h2><img src="music-title-image.jpg" alt="Music"></h2>
+            <p style="color:whitesmoke;">Huge fan of the golden age in Hip Hop: Dilla, Madlib, Pete Rock etc. I remix music kind of the same way filmakers mix films. Listen.</p>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/5UEQHgFxkHcy1iyY6Ay579?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+            </iframe>
         </div>
 
         <!-- About Section -->
         <div class="section" id="about">
-            <h2>About</h2>
+            <h2><img src="abouti.png" alt="About" width="500" height="150"></h2>
             <p>Bio and maybe even a picture of you</p>
             <img src="image-placeholder.jpg" alt="Image Description Here">
         </div>
