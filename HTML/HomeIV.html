@@ -39,8 +39,9 @@
 
     <div class="main">
         <section id="experimental-film">
-            <!-- Add class="section-header" to your img tag -->
-            <img class="section-header" src="Labels/Efilmii.png" alt="Experimental Film">
+            <a href="https://www.youtube.com/channel/UCM3wrTt5LDRGd398wlgpCHQ" class="image-link" target="_blank">
+                <img class="section-header" src="Labels/Efilmii.png" alt="Experimental Film">
+            </a>
             <!-- Embed a YouTube video -->
             <iframe width="700" height="0" src="https://www.youtube.com/embed/-kBydySFMS8?autoplay=1&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </section>
@@ -56,10 +57,10 @@
                     <p>If you are interested in owning a piece of my multimedia art, there are several options available:</p>
                     <ul>
                         <li>
-                            <a id="print-link" href="https://www.inprnt.com/gallery/psydufilm/" target="_blank">Click here</a> to purchase prints.
+                            <a id="print-link" href="https://www.inprnt.com/gallery/psydufilm/" target="_blank">Click here</a> to purchase prints, stickers, etc.
                         </li>
                         <li>
-                            <a id="tapestry-link" href="URL_TO_STORE_FOR_TAPESTRIES" target="_blank">Click here</a> to buy tapestries.
+                            Link to buy tapestries coming soon...
                         </li>
                     </ul>
                 </div>
@@ -99,7 +100,10 @@
         
     </div>
     <script>
-        let images = ["ART\\fire.png", "ART\\MMM.jpg", "ART\\flower.jpg", "ART\\eyes.png"];
+        let images = [];
+        for (let i = 1; i <= 18; i++) {
+            images.push("ART/33/image" + i + ".jpg");
+        }
         let currentImageIndex = 0;
         const imageElement = document.getElementById('toggleImage');
     
@@ -155,14 +159,11 @@
     <!-- Current Projects and Newsletter Section -->
   
     <div id="contact-form">
-        <img id ="contact-image" src="Labels/contact me.png" alt="Contact">
-        <form action="YOUR_SERVER_ENDPOINT" method="post">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdXVzeGW8dWooHUs0sFKCMFbBc46Jd0fM0ZrMlgOp1aVIn1sQ/viewform?usp=sf_link" target="_blank">
+            <img id="contact-image" src="Labels/contact me.png" alt="Contact">
+        </a>
     </div>
+    
     
 
     <!-- Footer Section -->
