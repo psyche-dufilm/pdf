@@ -1,0 +1,13 @@
+from flask import Flask, render_template
+import os
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    image_folder = os.path.join('static', 'images')
+    images = [os.path.join(image_folder, img) for img in os.listdir(image_folder)]
+    return render_template('home.html', images=images)
+
+if __name__ == '__main__':
+    app.run(debug=True)

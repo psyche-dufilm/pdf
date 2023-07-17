@@ -109,17 +109,19 @@ body, ul {
 }
 #about {
     display: flex;
-    align-items: flex-start; /* Changed from center to flex-start */
+    align-items: center; /* Changed from center to flex-start */
     justify-content: flex-end;
     width: 100%;
     margin: 20px 0;
 }
 #about-image-container {
     width: 66%;
+    align-items: center;
 }
 #about-image {
     width: 100%;
     height: auto;
+    padding-left: 10px;
 }
 #about-text {
     width: 33%;
@@ -162,21 +164,21 @@ body, ul {
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    width: 60%;
+    width: 30%;
     background: #f2f2f2;
     padding: 20px;
     border-radius: 10px;
 }
 
 #contact-form h2 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 #contact-form input[type="text"],
 #contact-form input[type="email"],
 #contact-form textarea {
     width: 80%;
-    padding: 10px;
+    padding: 15px;
     margin-bottom: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -211,13 +213,33 @@ body, ul {
     width: 50%;
 }
 
-#instagram-link img,
-#soundcloud-link img,
-#tiktok-link img,
-#spotify-link img {
-    width: 60%;
+#instagram-link img {
+    width: 50%;
     height: auto; /* Preserve aspect ratio */
     object-fit: contain;
+    padding: 10px;
+}
+#soundcloud-link img {
+    width: 50%;
+    height: auto; /* Preserve aspect ratio */
+    object-fit: contain;
+    padding: 10px;
+
+}
+#tiktok-link img {
+    width: 40%;
+    height: auto; /* Preserve aspect ratio */
+    object-fit: contain;
+    padding: 10px;
+
+}
+ 
+#spotify-link img {
+    width: 45%;
+    height: auto; /* Preserve aspect ratio */
+    object-fit: contain;
+    padding: 10px;
+
 }
 
 
@@ -226,6 +248,37 @@ body, ul {
     height: auto; /* Keep aspect ratio */
     max-height: 30px; /* Limit height to not take up too much space */
     padding-bottom: 20px; /* Set the space you want below the images */
+    align-items: center;
+}
 
+/* #contact-image {
+    padding-bottom: 15px;
+    width: 45%;
+} */
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#contact-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px; /* Optional: Add spacing between the image and the form */
+}
+
+form {
+    max-width: 300px; /* Optional: Set the maximum width of the form */
+    width: 100%;
+}
+
+input, textarea, button {
+    margin-bottom: 10px; /* Optional: Add spacing between form elements */
+}.centered {
+    display: block;
+    margin: 0 auto;
 }
 
