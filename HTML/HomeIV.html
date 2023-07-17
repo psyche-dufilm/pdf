@@ -7,6 +7,18 @@
         <link rel="stylesheet" type="text/css" href="CSS\HomeIV.css">
     </head>
     
+    <link href="https://fonts.googleapis.com/css2?family=Victor+Mono:wght@600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Victor Mono', monospace;
+            font-size: 14px; /* Adjust the font size as desired */
+        }
+
+        input, textarea {
+            font-family: 'Victor Mono', monospace;
+            font-size: 14px; /* Adjust the font size as desired */
+        }
+    </style>
 </head>
 <body>
     <!-- Header Section -->
@@ -30,7 +42,7 @@
             <!-- Add class="section-header" to your img tag -->
             <img class="section-header" src="Labels/Efilmii.png" alt="Experimental Film">
             <!-- Embed a YouTube video -->
-            <iframe width="700" height="0" src="https://www.youtube.com/embed/-kBydySFMS8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe width="700" height="0" src="https://www.youtube.com/embed/-kBydySFMS8?autoplay=1&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </section>
     <section id="illustration">
             <img class="section-header" src="Labels/multimedia art.png" alt="Multi-Media Art">
@@ -55,25 +67,26 @@
                 <ul>
                     <li>
                         <a id="instagram-link" href="https://www.instagram.com/psychedufilm/" target="_blank">
-                            <img src="Labels\IGicon.png" alt="Instagram">
+                            <img class="social-icon" src="Labels\IGicon.png" alt="Instagram">
                         </a>
                     </li>
                     <li>
                         <a id="soundcloud-link" href="https://soundcloud.com/user-810427866" target="_blank">
-                            <img src="Labels\Soundcloud-logo.png" alt="Soundcloud">
+                            <img class="social-icon" src="Labels\Soundcloud-logo.png" alt="Soundcloud">
                         </a>
                     </li>
                     <li>
                         <a id="tiktok-link" href="https://www.tiktok.com/@du_film" target="_blank">
-                            <img src="Labels\tiktok1.png" alt="Tiktok">
+                            <img class="social-icon" src="Labels\tiktok1.png" alt="Tiktok">
                         </a>
                     </li>
                     <li>
                         <a id="spotify-link" href="https://open.spotify.com/artist/5UEQHgFxkHcy1iyY6Ay579" target="_blank">
-                            <img src="Labels\Spotify_icon.svg.png" alt="Spotify">
+                            <img class="social-icon" src="Labels\Spotify_icon.svg.png" alt="Spotify">
                         </a>
                     </li>
                 </ul>
+                
                 
                 
                 
@@ -90,11 +103,23 @@
         let currentImageIndex = 0;
         const imageElement = document.getElementById('toggleImage');
     
-        imageElement.addEventListener('click', function() {
+        function changeImage() {
             currentImageIndex = (currentImageIndex + 1) % images.length;
             imageElement.src = images[currentImageIndex];
+        }
+    
+        // Set the initial image
+        imageElement.src = images[currentImageIndex];
+    
+        // Change image on click
+        imageElement.addEventListener('click', function() {
+            changeImage();
         });
+    
+        // Change image every second
+        setInterval(changeImage, 1000);
     </script>
+    
     
     
     
@@ -103,16 +128,26 @@
             <img id="about-image" src="ART\\Derrick1.jpg" alt="About me">
         </div>
         <div id="about-text">
-            <img class="section-header" src="Labels/about me.png" alt="about me">
-            <p>I am an artist at the crossroads of technology and tradition, a conduit between the digital and physical realms. My craft revolves around remixing film, a process that mirrors how DJs seamlessly blend songs to create an entirely new auditory experience. The passion for this art form was not born overnight but has been honed and nurtured through a decade of intense dedication and freakish study of experimental art. Every clip, every frame, every shot I dissect and stitch back together is part of a grander narrative that I weave, a visual symphony that I compose.
-
-Just like the DJs I admire, I know how to sample and spin. My inspirations come from the golden age of Hip Hop – artists like Dilla, Madlib, and Pete Rock have left an indelible mark on me. Their innovative use of loops, beats, and rhythm has taught me to perceive and appreciate films from a different perspective.
-
-But my creative exploration doesn't stop there. While I remix films in the style of a DJ, I also remix music, bringing a filmmaker's eye to the auditory art form. It's a process of transformation, of breathing new life into sounds and harmonies. It's an entirely different canvas, but the process is familiar – I edit, I splice, I arrange and rearrange, until the result is an audioscape that tells its own story, that evokes its own emotion. I like to think of it as reverse engineering the traditional approach to creating art - in the same way filmmakers weave scenes together to tell a cohesive story, I sew together notes and rhythms to create a harmonious musical piece.
-
-My process is a dance between two distinct but closely related art forms. The result is a mash-up of visuals and sounds that pushes the boundaries of both, creating a truly unique sensory experience.
-
-Through my work, I aim to inspire others to see the world in a new light, to appreciate the beauty that can be found in the unexpected. The world is a never-ending source of inspiration and I'm always looking forward to my next project, my next remix, my next opportunity to stir the senses. So, sit back, relax, and listen. Let me take you on an unforgettable journey.</p>
+            <img class="section-header centered" src="Labels/about me.png" alt="about me">
+            <p>
+                I am an artist at the crossroads of technology and tradition, a conduit between the digital and physical realms. My craft revolves around remixing film, a process that mirrors how DJs seamlessly blend songs to create an entirely new auditory experience.
+            </p>
+            <p>
+                The passion for this art form was not born overnight but has been honed and nurtured through a decade of intense dedication and freakish study of experimental art. Every clip, every frame, every shot I dissect and stitch back together is part of a grander narrative that I weave, a visual symphony that I compose.
+            </p>
+            <p>
+                Just like the DJs I admire, I know how to sample and spin. My inspirations come from the golden age of Hip Hop – artists like Dilla, Madlib, and Pete Rock have left an indelible mark on me. Their innovative use of loops, beats, and rhythm has taught me to perceive and appreciate films from a different perspective.
+            </p>
+            <p>
+                But my creative exploration doesn't stop there. While I remix films in the style of a DJ, I also remix music, bringing a filmmaker's eye to the auditory art form. It's a process of transformation, of breathing new life into sounds and harmonies. It's an entirely different canvas, but the process is familiar – I edit, I splice, I arrange and rearrange, until the result is an audioscape that tells its own story, that evokes its own emotion. I like to think of it as reverse engineering the traditional approach to creating art - in the same way filmmakers weave scenes together to tell a cohesive story, I sew together notes and rhythms to create a harmonious musical piece.
+            </p>
+            <p>
+                My process is a dance between two distinct but closely related art forms. The result is a mash-up of visuals and sounds that pushes the boundaries of both, creating a truly unique sensory experience.
+            </p>
+            <p>
+                Through my work, I aim to inspire others to see the world in a new light, to appreciate the beauty that can be found in the unexpected. The world is a never-ending source of inspiration and I'm always looking forward to my next project, my next remix, my next opportunity to stir the senses. So, sit back, relax, and listen. Let me take you on an unforgettable journey.
+            </p>
+            
         </div>
         
     </section>
@@ -120,7 +155,7 @@ Through my work, I aim to inspire others to see the world in a new light, to app
     <!-- Current Projects and Newsletter Section -->
   
     <div id="contact-form">
-        <img id="about-image" src="Labels/contact me.png" alt="Contact">
+        <img id ="contact-image" src="Labels/contact me.png" alt="Contact">
         <form action="YOUR_SERVER_ENDPOINT" method="post">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
